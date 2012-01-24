@@ -1,149 +1,578 @@
-{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033\deftab709{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fnil\fcharset0 Arial;}}
-{\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green0\blue128;}
-{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
-{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\keep\keepn\nowidctlpar\s2\sb200\sl480\slmult1\cf1\lang4105\b\f0\fs36 Extreme Programming\par
-\pard\nowidctlpar\fi360\sa200\sl480\slmult1\cf0\fs24 CMPT 475 Spring 2012\par
-\b0\f1\par
-\pard\nowidctlpar\sl480\slmult1\f0 Christopher Tse        |    cta16@sfu.ca      |    556001847\lang1033\f1\par
-\lang4105\f0 Dominic Renaud  \tab |    \cf1\lang255{\field{\*\fldinst{HYPERLINK "mailto:dvr@sfu.ca" }}{\fldrslt{\lang4105\f1 dvr@sfu.ca}}}\lang255\f0\fs24  \tab |    301063898\cf0\lang1033\f1\par
-\pard\f0 Brandon Mak\tab |    bjm7@sfu.ca\tab |    301058096\par
-\pard\nowidctlpar\fi360\sa200\sl480\slmult1\lang4105\f1\fs96\par
-\b\f0\fs72 FILL IN YOUR INFO\par
-\b0\f1\fs22\par
-\pard\nowidctlpar\sl480\slmult1\lang1033\fs24\par
-\pard\nowidctlpar\par
-\par
-\par
-\par
-\par
-\par
-\pard\nowidctlpar\sl480\slmult1\f2 Table of Contents\par
-1. Introduction\par
-2. Practices\par
-\tab 2.1. User Stories & User Acceptance Tests\par
-\tab\tab 2.1.1. Analysis\par
-\tab 2.2. Iterative Development\par
-\tab\tab 2.2.1 Analysis\par
-\tab 2.3. Iteration Planning\par
-\tab 2.4. \lang4105 Open work spaces\lang1033\par
-\lang4105\tab\tab 2.4.1. Analysis\lang1033\par
-\tab 2.5. Standing meetings\par
-\tab\tab 2.5.1. Analysis\par
-\tab 2.6. Simplicity\par
-\tab 2.7. \lang4105 Pair Programming\par
-\tab\tab 2.7.1 Analysis\lang1033\par
-\tab 2.8. Frequent Integration\par
-\tab\tab 2.8.1. Analysis\b\par
-\b0 3. Conclusion\par
-4. Glossary\b\par
-\b0 5. Bibliography\b\par
-\pard\nowidctlpar\par
-\par
-\par
-\par
-\par
-\pard\nowidctlpar\sl480\slmult1\b0 1. Introduction\b\par
-\b0\tab Extreme Programming is a relatively new software development methodology focused on producing software that can be quickly tested and that is as complete as possible at every step, rather than just at the end of the project. It emphasizes teamwork between the developers and the client, and adapts to client feedback on the project[3]. \b\par
-\b0\tab Unlike in the waterfall method of software development, Extreme Programming sets out the initial requirements very loosely. Scheduling of development is done on a regular basis, rather than all at the start, and the features to be developed are determined based on current priorities and customer feedback, rather than the initial plan. This allows for the flexibility to handle unexpected changes to customer requirements, or to manage misinterpretations of the requirements as initially laid out before the product has shipped.\b\par
-\par
-\b0 2. Practices \b\par
-\b0\tab There are many simple rules and practices that make up Extreme Programming. This essay will only cover a handful of them. They are what makes Extreme Programming, and as such should be followed by teams who want to develop in this methodology. \b\par
-\par
-\b0 2.1. User Stories & User Acceptance Tests\b\par
-\pard\nowidctlpar\fi720\sl480\slmult1\b0 In XP, requirements elicitation is done entirely though User Stories.  In contrast to other methods of requirements engineering, User Stories allow the customer and programmer to overcome problems with understanding.   When a customer \ldblquote tells a story about how the system will be used\rdblquote  ([5], pg. 16), the requirements contain more background context allowing the programmers to understand the problem better.  This allows programmers to ask more effective questions about the system to be developed to gain more insight into the problem.  After the exchange of stories and questions the customer may feel that the initial story he or she started with is not satisfactory and will revise it.  The continued revision of the story brings initially hidden requirements into light.\b\par
-\pard\nowidctlpar\sl480\slmult1\b0\tab If a Story is too large it is split up into smaller segments because programmers have more accurate estimates for smaller problems.  As recommended by one of the founders of XP, Ron Jeffries states in his book: \ldblquote stories should encompass a week or two of programmer time\rdblquote  ([5], pg. 18).  For planning purposes this helps the development team stay as close to their estimated schedule as possible.\b\par
-\b0\tab After the implementation is complete, Acceptance Tests are performed to verify the system indeed satisfies the system described in the user story.  Like other development models, the purpose of Acceptance Tests remain the same \endash  to allow the customer to verify the system performs as desired and to raise confidence in all the project stakeholders.  However, Acceptance Tests also have another crucial role unique to XP.  The XP model reduces the amount of documentation necessary by working in reverse; rather than writing the documentation first and deriving test cases from it, XP instead uses the test cases to derive what documentation is necessary.  This model allows programmers to begin developing a system prior to heavy paperwork, and at the final stage only the relevant documentation will surface.  Being agile in nature, XP demands that all tests \endash  Acceptance and Unit Tests \endash  are automated.\b\par
-\par
-\b0 2.1.1 Analysis\b\par
-\b0\tab The method of using User Stories is an interesting approach.  On first impression it seems the developers may receive unnecessary information.  More traditional software approaches required the customer to only specify what the system must do, and programmers were free to implement it with any desired strategy.  Asking someone to \ldblquote make this for me, and I don\rquote t care how you do it\rdblquote  makes sense as we normally would not expect the client to have much understanding on the technical aspects of development, and those decisions would be better left for the developer to deal with.  Although User Stories take more commitment by both parties \endash  customer and developer \endash  due to the amount of communication that must be maintained, the process of writing and revising Stories helps the customer understand the product truly desired and helps expose details that may have initially been omitted.  By the same token, when a user story explains in detail the what, where, why, who, and how, it allows the developers to make more informed decisions during the implementation stage.\b\par
-\b0\tab  The role of user Acceptance Tests strongly enforces the paradigm of XP \endash  a model that is adaptive rather than predictive.  In waterfall models, development parties invest too many resources in analyzing the system and the runtime environments to discover all potential roadblocks.  It is difficult or near impossible to tabulate every possible constraint, and there are likely to be constraints that are irrelevant to the current iteration of the system.  By using Acceptance Tests at each stage to uncover the requirements, only currently relevant documentation is kept.  This level of abstraction also allows the development team to focus on the current User Story at hand, and this leads to a cohesive development system.\b\par
-\pard\nowidctlpar\fi720\sl480\slmult1\b0 XP has a heavy focus on testing, demanding all tests be automated and running them on the system frequently.  Due to XP\rquote s nature in welcoming change, it is important to have lower level modules performing at the highest quality.  This allows higher level models to be switched with another when requirements change, and developers will have confidence that the lower level system will continue to maintain its stability.  That is not to say lower level modules need not be tested when the system as a whole undergoes change (take Ariadne 5 for example).  But as software engineers, we generally do not \ldblquote reinvent the wheel\rdblquote , and we always use previously developed modules as a basis.  For example, when we develop in a programming language, pinpointing the location of an error becomes easier when we can trust our compiler, because we know the error is within our own code rather than underlying systems.  This optimism may not be applicable to large scale projects because of the amount of coupling necessary resulting in a more complex system, but XP is not an effective methodology when the project size is large due to face to face communication losing effectiveness.\b\par
-\pard\nowidctlpar\sl480\slmult1\par
-\b0 2.2. Iterative Development [10]\b\par
-\b0\tab A core component of Extreme Programming is Iterative Development. Instead of development being scheduled across an entire release plan, it is scheduled into 1-3 week iterations, which are organized immediately before being worked on. It allows for unforeseen feature requests or requirements issues to be handled when they come up, rather than waiting until the end of the project, or requiring clairvoyant planning teams.\b\par
-\b0\tab The structure of Iteration is fairly simple. Take the highest priority features than can be done in the iteration length \u9472? usually one week, but could be as long as three \u9472? and put them together as the iteration plan. These features are exclusively what will be done in the next iteration. If the features needed to be done seem to be taking too long, re-plan in the middle of the iteration to determine which features can be pushed back. Once the iteration is done, the current version of the product should be tested with the customer, to ensure that the project remains on track. \b\par
-\b0\tab It is crucial that the iteration be taken as a hard deadline. While extreme programming is much more conducive to floating deadlines for the entire project, the iterations need to stay on track.\b\par
-\par
-\b0 2.2.1. Analysis \b\par
-\b0\tab The primary benefit to iterative development is that the project is being continuously revised to respond and adapt to the customer's needs. There is less concern about requirements as well, as these can be reviewed more easily once parts of the system are in place and thus there is a more concrete perspective on the system. \b\par
-\b0\tab An element that is somewhat ambiguous is that iterations are the level at which flexibility and adaptability essentially stop. This is good because it provides structure to the project, but may be problematic if the time per iteration is too large to adapt effectively, or too small to allow for the long-term planning of a project to be useful, such as in a large team or with a military or government project, where the requirements may not be as likely to change with use. How this affects development varies greatly from project to project, and is a key aspect of extreme programming that needs to be carefully considered during the initial project planning, when determining the development methodology.\b\par
-\b0\tab The downside to iterative development is that it can be short-sighted. While this can be mitigated for really large features by breaking them down, or simply making them be built across iterations, this may not always work. Depending on how set in stone the requirements are, constant revisions and changes may cause large or complex features to be put off continuously. It is important to ensure that features are being added to iterations based on priority as well as feasibility within the time frame.\b\par
-\par
-\b0 2.3. Iteration Planning [11]\b\par
-\b0\tab Planning in XP is primarily handled on a per-iteration basis, treating the iteration as a more solid unit than the plan for the whole release. This is the point where the flexibility of XP goes away and the plan becomes set. While there are times where features can end up rolling over to the next iteration, the iteration end date is meant to be a hard deadline.\b\par
-\b0\tab For planning the release, there should be enough features chosen for the iteration such that the features can be completed in the time given, provided that nothing goes wrong. This should be determined by figuring out how many days it would take to do the feature if there were no distractions, referred to as ideal programming days. If it takes less than 1 day, group them together. If it takes more than 3 days, break them apart. Once you have a good idea how long each feature will take then the whole iteration can be evaluated. At this stage, if there are too many features, put off some of the lower priority ones until the following iteration. If those that exist would likely be completed within the time of the iteration with time to spare, then add more features to the iteration. \b\par
-\b0\tab When planning iterations, it is also very important to take a look back and see how many features got completed during the previous iteration, and use that to determine how quickly features can realistically be completed, and thus how many features should be on the next iteration. It is worth keeping track of how much time was taken to build a feature compared to how much time was estimated, and also how much time was taken up by fixing bugs. Bug fixing time is less predictable, and doesn't fit into the idea of the ideal programming day. However, if a feature took longer because its completion time was poorly estimated, then that is something which needs to be considered more carefully going forward. It takes several iterations before it is possible to have an accurate estimate of how quickly features can be completed, and thus how many features can be put into a single iteration. So long as there is a critical eye to the amount of time features take, then the time taken to accurately measure how quickly work can be done is minimized.\b\par
-\par
-\lang4105\b0 2.4. Open work spaces\b\par
-\pard\nowidctlpar\fi360\sa200\sl480\slmult1\b0 Communication is the most important aspect in any team.  Teams often consist of many unique individuals with different levels of experience and strengths. If teammates do not communicate, then they cannot utilize the full potential of the team. Open Work Spaces addresses the problem by creating an environment where everyone is comfortable to communicate [1].\b\par
-\pard\nowidctlpar\sl480\slmult1\b0 An example of an Open Work Space is the Japan Airlines office. The CEO of JAL sits at a desk that is on the same floor as many other employees without any walls surrounding him. Many of his employees share desks and don\rquote t have a wall dividing them either. By working in the same environment, the gap between different levels and management are not as apparent [1]. This allows employees from all levels to comfortably communicate. Other examples of Open Work Spaces include offices of Facebook and Google. \b\par
-\b0\tab Different people have different preferences in the way they communicate.  In order to encourage interaction even further, Open Work Spaces allows many forms of communications. The various forms may include white boards, sticky notes, charts, and other forms of communication [1]. By providing different ways in which teammates can communicate, all teammates can contribute in a way that they are comfortable with [1].  For example, if a teammate is not comfortable talking in a large group, they can use sticky notes to add to any ideas. Work stations can also be individual or in a cluster to allow teammates to choose how they want to work without excluding themselves from the team [1].\lang1033\b\par
-\b0\par
-\lang4105 2.4.1. Analysis\lang1033\par
-\lang4105\tab Open Work Spaces works in conjunction with other XP components such as Standing Meetings and Pair Programming. The Open Work Space allows everyone to participate in meetings wherever they are in the office. In addition, the location of the Standing Meeting will create a centralized location where everyone can discuss ideas. Open Work Spaces also optimizes Pair Programming because it allows different groups of Pair Programmers to participate in other Pair Programming discussions [9].\par
-\tab Although Open Work Spaces has many advantages, it is also important to address potential issues that will make the team ineffective. One of these concerns is Privacy [9]. Without privacy, some team members may feel that they cannot work comfortably [9]. However, the lack of privacy will encourage the interaction between team members and remove the idea that a certain team member \lquote owns\rquote  a certain part of the project. Distractions are another issue that might affect the performance of the teammates [9]. When many groups are discussing strategies, it may be difficult for team members to concentrate. However, studies have shown that team members will adapt to this by automatically filtering out any unnecessary discussions [9].\lang1033\b\par
-\par
-\pard\nowidctlpar\sa200\sl480\slmult1\b0 2.5. Standing meetings [12]\b\par
-\pard\nowidctlpar\sl480\slmult1\b0\tab An important component of any XP project is starting the day with a Standing Meeting. These need to be conducted in a fairly central location, and should be short. The point is to keep everyone up to date on what everyone is doing, and to point out any issues that may need discussion after the standup meeting. \b\par
-\b0\tab The structure for these meetings is to go around to each of the developers, and have them talk briefly about what they did yesterday, what they plan to do today, and what obstacles they are having in completing their job. This allows other developers to understand where the team is at. It also gives opportunities to bring up quick fixes to small issues, or let someone know if they are a bottleneck on part of the project, so they can re-prioritize appropriately. It is important that these discussions are kept brief. If they require more 1-on-1 or small group discussion they should be done after the Standing Meeting is over. \b\par
-\b0\tab It is important that these meetings are conducted regularly. If they are not then it is easy for the developers to lose a clear picture of what everyone else is working on, and thus makes future communication with team members more difficult. It also means that more meetings are needed between small groups which can eat more time than necessary if there was the Standing Meeting in the morning. The time constraint on the Standing Meeting encourages quick action and no time wasted, while meetings in smaller groups can get sidetracked by certain ideas or discussions, as they aren't necessarily as constrained.\b\par
-\b0\tab Another important but non-critical part of Standing Meetings is a whiteboard. With a whiteboard that has the schedule for the team for the iteration cycle, there is a reference point for the activities the developers are doing. When they bring up their activity the previous day and their plans for the day, they can be compared with the whiteboard schedule, which can either cause the developer to change their priorities, or cause the whiteboard schedule to change in response to their activities, which may have been critical bug fixes or simply an increase in the amount of time it is taking to build the feature they are currently working on.\b\par
-\par
-\b0 2.5.1. Analysis\b\par
-\b0\tab The main benefit to Standing Meetings is synchronization with the team. Knowing where everyone else is in the project is good both for knowing how well the scheduling is working for the iteration, and for morale. Constant reassurance that everyone on the team is doing their job, and that they are willing to help with any obstacles that might come up for development, is a great way to keep a team together and motivated. It also ensures that any problems which come up will be resolved by the next morning at the latest.\b\par
-\pard\nowidctlpar\sa200\sl480\slmult1\lang9\b0\tab The downside to Standing Meetings is that they do take some time, and require some discipline in remembering to do them and in keeping track of what work has been done. This isn't a major con, it just means you must maintain disciplined.\b\par
-\pard\nowidctlpar\sl480\slmult1\lang1033\par
-\b0 2.6. Simplicity \b\par
-\b0\tab Software development has a phrase called \ldblquote Keep It Simple Stupid\rdblquote  (KISS), it helps others with understanding your code and would generally make the overall program more maintainable. XP takes this a step further and includes it as a functional requirement instead of a guideline. Simple functions are easier to maintain, create, and modify.\b\par
-\b0\tab Accompanying the new importance of Simplicity are four subjective qualities: \ldblquote Testable, Understandable, Browsable, and Explainable (TUBE)\rdblquote .[2]. The qualities are familiar but are now more important in XP.\b\par
-\b0\tab Testing is a fundamental part of any software design. It is made to ensure quality and proper functionality in a product. So with every simple function being written a corresponding acceptance and Unit Test must be done. This will help with quick feedback and design changes if necessary.\b\par
-\b0\tab Browse-ability is a somewhat newer concept, but can be summed up with naming conventions. To make a developer\rquote s life easier it is always good to find useful names for given functions, classes, or variables such that it would help with documentation and ease of use. This also helps with inheritance. For example, if you have a base class person and you want to branch off into employees, managers, and other types it would be easily understood by others analyzing the documents.\b\par
-\b0\tab Understandable and explainable can be grouped together. Understandability will come with time spent on a project, whereas the more important focus is the ability to explain the project ideas. For example if a person recently joined the team and has no idea what is going on. It would help if your functions and methods are easily communicated to the confused individual.\b\par
-\b0\tab To keep things simple and easier it helps to only program functions and methods only when you need them. XP tells us to refrain from creating complex methods that achieve multiple goals. Focus on writing one method for one goal and making it understandable.\b\par
-\par
-\lang4105\b0 2.7. Pair Programming\b\par
-\pard\nowidctlpar\fi720\sa200\sl480\slmult1\b0 Pair Programming is an essential part of XP. A team of programmers can use Pair Programming by pairing up programmers of various skill levels. Both programmers share one computer [8]. While one programmer codes, the other looks over the code for any errors as well as conceptualizing the general form of the solution [6]. The programmers should also discuss their strategy at all times to ensure that they both understand the problem specification and their own solution [6]. The two programmers can switch roles at any time.\b\par
-\pard\nowidctlpar\sa200\sl480\slmult1\b0\tab The first advantage of Pair Programming is the increased productivity of the programmers and the improved quality of the product [6]. Pair programming can improve productivity in three ways. The programmers become more efficient because they waste less time [6]. Instead of surfing the internet or checking their email, they are motivated to work. If one person is stuck on a problem, both programmers can discuss possible solutions or switch roles. This ensures that both programmers are doing something constructive.  Also, since one programmer is continuously reviewing the code, there is a greater chance that a bug will be discovered and removed [6]. This will reduce the amount of time spent testing and finding the bug. Lastly, there is a lower number of fragmented code that needs to be merged between groups. \b\par
-\pard\nowidctlpar\sl480\slmult1\b0\tab Another advantage of Pair programming is that both programmers become better programmers after each session [6]. Every programmer is different in skill level and use different methods to solve the same problem. When programmers discuss with other programmers their strategies, they can discover the disadvantages or advantages of solving the problem in another way.  By discussing the problems, each programmer can also get a better understanding of the problem and how well their solution solves the problem.  Pair programming works well with Open Work Spaces because it allows Pair Programming groups to overhear discussions from other groups [4]. This encourages communication between groups. The result is a more cohesive team and software [4]. \par
-\par
-2.7.1 Analysis\b\par
-\b0\tab Some programmers are more experienced than others. It is easy to see how the less experienced programmer will benefit from this form of programming because the programmer with more experience can spot mistakes made by the other programmer. However, the programmer with more experience can also benefit from this form of programming because they can get a fresh perspective on a problem that they had never considered [6].  \lang1033\b\par
-\par
-\b0 2.8. Frequent Integration\b\par
-\pard\nowidctlpar\fi720\sl480\slmult1\b0 For ease of integration, developers (in pairs) during the construction phase must get in the habit of submitting code to the repository as frequent as possible. This will ensure that there will be little fragmentation in the development process and minimal code diversion. If this is not done often the inconsistencies would cause a significant increase in time spent integrating when large sections of code and functionality are added.\b\par
-\pard\nowidctlpar\sl480\slmult1\b0 Frequent Integration helps identify potential conflicts earlier so that projects can be quickly redesigned and adapt to the new needs of the application. Though this may sound tedious it may prove more convenient than to try and integrate weeks of separate functions together causing fragmentation of versions and potential requirement changes done by other team of developers.\b\par
-\b0\tab Frequent Integration is highly encouraged and a fundamental part of keeping fragmentation to a minimum. It is still good to note that a single pair of coders should be integrating their code with the full project repository per few hours of coding. Ensuring that different pairs of developers submit code at different times will prevent conflicting code testing. During the Standing Meeting there should be some discussion of estimated completion of parts of code for integration. Having a good idea of when new code is about to be integrated will help ensure future commits of code will be current and up to date.\tab  \b\par
-\par
-\b0 2.8.1. Analysis\b\par
-\b0\tab With the constant updates it will be easier to gauge how far the progress of the overall project is going. The iterative nature of the integration helps with efficiency of the overall project development. The users will have tested code more frequently and there would be less integration fixes causing delays in the development of other teams of developers. Frequent Integration also promotes communication with other pairs of developers so the entire team can make some assumptions to what is to be expected during integration.\b\par
-\b0\tab Though the idea of Frequent Integration is simple, it requires a lot of discipline and communication to accomplish. This approach for programming would most likely thrive in small project environment involving few pairs of developers. If this was applied to a larger project involving more people, it could be hard to set times for integration due to the sheer increase in commits.\b\par
-\par
-\b0 3. Conclusion\b\par
-\b0\tab Extreme Programming allows for much adaptation and review of a project before it is shipped to the customer. It can easily cut costs, improve customer satisfaction, and keep a team going strong through a project [3]. It does require some work and discipline, the cooperation of the client, and the right team. It may not be the best methodology for every project either, but when it can be used, it should be.\b\par
-\par
-\b0 4. Glossary\par
-\pard\sa200\sl480\slmult1 Acceptance Test \endash  Allow clients to verify that the product works as intended\par
-Frequent Integration \endash  The habit of submitting to a repository frequently to reduce fragmentation.\par
-Iteration Planning \endash  Organizing the schedule and team responsibilities within each integration\par
-Iterative Development \endash  Scheduling multiple development cycles that consist of implementation and testing instead of spending a large amount of time testing at the end of the project.\par
-Open Work Spaces \endash  A large open area where team members work together.\par
-Pair Programming \endash  Two programmers taking turns working on a computer while discussing possible solutions to a problem.\par
-Standing Meetings \endash  A meeting, typically early in the day, to inform teammates of their progress.\par
-User Stories \endash  A method used by the client to help the programmer understand the purpose of certain features in a program\par
-\pard\nowidctlpar\sl480\slmult1\par
-5. Bibliography\b\par
-\pard\sl480\slmult1\b0 [1]\tab Extreme Programming on Space; \lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/space.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/space.html}}}\lang1033\b\f2\fs24\par
-\b0 [2]\tab Extreme Programming on Simplicity; \lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/simple.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/simple.html}}}\cf3\lang255\ul\f2\fs24     3\cf0\lang1033\ulnone\up10 rd\up0  paragraph.\par
-[3] \tab\lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/}}}\cf3\lang255\ul\f2\fs24      2\cf0\lang1033\ulnone\up10 nd\up0  and 3\up10 rd\up0  paragraph\par
-[4] \tab\lang4105{\field{\*\fldinst{HYPERLINK "http://www.agilemodeling.com/essays/agileModelingXP.htm"}}{\fldrslt{\ul\cf2 http://www.agilemodeling.com/essays/agileModelingXP.htm}}}\lang1033\f2\fs24\par
-[5] \tab Extreme Programming Installed (By Ron Jeffries, Ann Anderson, Chet Hendrickson; October 16, 2000)\b\par
-\lang4105\b0 [6] \tab All I Really Needed to Know about Pair Programming I learned in Kindergarten; {\field{\*\fldinst{HYPERLINK "http://www2.yk.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf"}}{\fldrslt{\ul\cf2 http://www2.yk.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf}}}\lang1033\b\f2\fs24\par
-\lang4105\b0 [7]\tab The Art of Agile; {\field{\*\fldinst{HYPERLINK "http://jamesshore.com/Agile-Book/pair_programming.html"}}{\fldrslt{\ul\cf2 http://jamesshore.com/Agile-Book/pair_programming.html}}}\lang1033\b\f2\fs24\par
-\lang4105\b0 [8] \tab Extreme Programming on Pair Programming; {\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/pair.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/pair.html}}}\lang1033\b\f2\fs24\par
-\lang4105\b0 [9]\tab Working Together in \ldblquote War Rooms\rdblquote  Doubles Teams\rquote  Productivity; \cf3\lang255\ul{\field{\*\fldinst{HYPERLINK "http://www.sciencedaily.com/releases/2000/12/001206144705.htm" }}{\fldrslt{\cf2\lang4105 www.sciencedaily.com/releases/2000/12/001206144705.htm}}}\cf0\lang1033\ulnone\b\f2\fs24\par
-\cf1\lang255\b0 [10]\tab Extreme Programming on Iterative Development; \cf0\lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/iterative.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/iterative.html}}}\cf1\lang1033\b\f2\fs24\par
-\cf0\lang255\b0 [11] \tab Extreme Programming on Iteration Planning; \lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/iterationplanning.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/iterationplanning.html}}}\lang1033\f2\fs24\par
-\lang255 [12]\tab Extreme Programming on Standing Meetings; \lang4105{\field{\*\fldinst{HYPERLINK "http://www.extremeprogramming.org/rules/standupmeeting.html"}}{\fldrslt{\ul\cf2 http://www.extremeprogramming.org/rules/standupmeeting.html}}}\lang1033\b\f1\fs24\par
-\b0\par
-}
- 
+{\rtf1\adeflang1025\ansi\ansicpg1252\uc1\adeff1\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang4105\deflangfe1041\themelang4105\themelangfe0\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fbidi \fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f11\fbidi \fmodern\fcharset128\fprq1{\*\panose 02020609040205080304}MS Mincho{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\f34\fbidi \froman\fcharset1\fprq2{\*\panose 02040503050406030204}Cambria Math;}
+{\f37\fbidi \fswiss\fcharset0\fprq2{\*\panose 020f0502020204030204}Calibri;}{\f39\fbidi \fmodern\fcharset128\fprq1{\*\panose 02020609040205080304}@MS Mincho;}{\flomajor\f31500\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fdbmajor\f31501\fbidi \fmodern\fcharset128\fprq1{\*\panose 020b0609070205080204}MS Gothic{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}{\fhimajor\f31502\fbidi \froman\fcharset0\fprq2{\*\panose 02040503050406030204}Cambria;}
+{\fbimajor\f31503\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\flominor\f31504\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\fdbminor\f31505\fbidi \fmodern\fcharset128\fprq1{\*\panose 02020609040205080304}MS Mincho{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\fhiminor\f31506\fbidi \fswiss\fcharset0\fprq2{\*\panose 020f0502020204030204}Calibri;}
+{\fbiminor\f31507\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f40\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\f41\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f43\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\f44\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\f45\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f46\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\f47\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\f48\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\f50\fbidi \fswiss\fcharset238\fprq2 Arial CE;}{\f51\fbidi \fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f53\fbidi \fswiss\fcharset161\fprq2 Arial Greek;}{\f54\fbidi \fswiss\fcharset162\fprq2 Arial Tur;}{\f55\fbidi \fswiss\fcharset177\fprq2 Arial (Hebrew);}{\f56\fbidi \fswiss\fcharset178\fprq2 Arial (Arabic);}
+{\f57\fbidi \fswiss\fcharset186\fprq2 Arial Baltic;}{\f58\fbidi \fswiss\fcharset163\fprq2 Arial (Vietnamese);}{\f152\fbidi \fmodern\fcharset0\fprq1 MS Mincho Western{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\f150\fbidi \fmodern\fcharset238\fprq1 MS Mincho CE{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\f151\fbidi \fmodern\fcharset204\fprq1 MS Mincho Cyr{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\f153\fbidi \fmodern\fcharset161\fprq1 MS Mincho Greek{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\f154\fbidi \fmodern\fcharset162\fprq1 MS Mincho Tur{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\f157\fbidi \fmodern\fcharset186\fprq1 MS Mincho Baltic{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\f410\fbidi \fswiss\fcharset238\fprq2 Calibri CE;}{\f411\fbidi \fswiss\fcharset204\fprq2 Calibri Cyr;}
+{\f413\fbidi \fswiss\fcharset161\fprq2 Calibri Greek;}{\f414\fbidi \fswiss\fcharset162\fprq2 Calibri Tur;}{\f417\fbidi \fswiss\fcharset186\fprq2 Calibri Baltic;}{\f418\fbidi \fswiss\fcharset163\fprq2 Calibri (Vietnamese);}
+{\f432\fbidi \fmodern\fcharset0\fprq1 @MS Mincho Western;}{\f430\fbidi \fmodern\fcharset238\fprq1 @MS Mincho CE;}{\f431\fbidi \fmodern\fcharset204\fprq1 @MS Mincho Cyr;}{\f433\fbidi \fmodern\fcharset161\fprq1 @MS Mincho Greek;}
+{\f434\fbidi \fmodern\fcharset162\fprq1 @MS Mincho Tur;}{\f437\fbidi \fmodern\fcharset186\fprq1 @MS Mincho Baltic;}{\flomajor\f31508\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}
+{\flomajor\f31509\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}{\flomajor\f31511\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\flomajor\f31512\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}
+{\flomajor\f31513\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flomajor\f31514\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\flomajor\f31515\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\flomajor\f31516\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}{\fdbmajor\f31520\fbidi \fmodern\fcharset0\fprq1 MS Gothic Western{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}
+{\fdbmajor\f31518\fbidi \fmodern\fcharset238\fprq1 MS Gothic CE{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}{\fdbmajor\f31519\fbidi \fmodern\fcharset204\fprq1 MS Gothic Cyr{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}
+{\fdbmajor\f31521\fbidi \fmodern\fcharset161\fprq1 MS Gothic Greek{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}{\fdbmajor\f31522\fbidi \fmodern\fcharset162\fprq1 MS Gothic Tur{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}
+{\fdbmajor\f31525\fbidi \fmodern\fcharset186\fprq1 MS Gothic Baltic{\*\falt \'82\'6c\'82\'72 \'83\'53\'83\'56\'83\'62\'83\'4e};}{\fhimajor\f31528\fbidi \froman\fcharset238\fprq2 Cambria CE;}{\fhimajor\f31529\fbidi \froman\fcharset204\fprq2 Cambria Cyr;}
+{\fhimajor\f31531\fbidi \froman\fcharset161\fprq2 Cambria Greek;}{\fhimajor\f31532\fbidi \froman\fcharset162\fprq2 Cambria Tur;}{\fhimajor\f31535\fbidi \froman\fcharset186\fprq2 Cambria Baltic;}
+{\fhimajor\f31536\fbidi \froman\fcharset163\fprq2 Cambria (Vietnamese);}{\fbimajor\f31538\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\fbimajor\f31539\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\fbimajor\f31541\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fbimajor\f31542\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\fbimajor\f31543\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\fbimajor\f31544\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fbimajor\f31545\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\fbimajor\f31546\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}
+{\flominor\f31548\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}{\flominor\f31549\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}{\flominor\f31551\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}
+{\flominor\f31552\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}{\flominor\f31553\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\flominor\f31554\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\flominor\f31555\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}{\flominor\f31556\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}
+{\fdbminor\f31560\fbidi \fmodern\fcharset0\fprq1 MS Mincho Western{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\fdbminor\f31558\fbidi \fmodern\fcharset238\fprq1 MS Mincho CE{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\fdbminor\f31559\fbidi \fmodern\fcharset204\fprq1 MS Mincho Cyr{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\fdbminor\f31561\fbidi \fmodern\fcharset161\fprq1 MS Mincho Greek{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\fdbminor\f31562\fbidi \fmodern\fcharset162\fprq1 MS Mincho Tur{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}{\fdbminor\f31565\fbidi \fmodern\fcharset186\fprq1 MS Mincho Baltic{\*\falt \'82\'6c\'82\'72 \'96\'be\'92\'a9};}
+{\fhiminor\f31568\fbidi \fswiss\fcharset238\fprq2 Calibri CE;}{\fhiminor\f31569\fbidi \fswiss\fcharset204\fprq2 Calibri Cyr;}{\fhiminor\f31571\fbidi \fswiss\fcharset161\fprq2 Calibri Greek;}{\fhiminor\f31572\fbidi \fswiss\fcharset162\fprq2 Calibri Tur;}
+{\fhiminor\f31575\fbidi \fswiss\fcharset186\fprq2 Calibri Baltic;}{\fhiminor\f31576\fbidi \fswiss\fcharset163\fprq2 Calibri (Vietnamese);}{\fbiminor\f31578\fbidi \froman\fcharset238\fprq2 Times New Roman CE;}
+{\fbiminor\f31579\fbidi \froman\fcharset204\fprq2 Times New Roman Cyr;}{\fbiminor\f31581\fbidi \froman\fcharset161\fprq2 Times New Roman Greek;}{\fbiminor\f31582\fbidi \froman\fcharset162\fprq2 Times New Roman Tur;}
+{\fbiminor\f31583\fbidi \froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\fbiminor\f31584\fbidi \froman\fcharset178\fprq2 Times New Roman (Arabic);}{\fbiminor\f31585\fbidi \froman\fcharset186\fprq2 Times New Roman Baltic;}
+{\fbiminor\f31586\fbidi \froman\fcharset163\fprq2 Times New Roman (Vietnamese);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;
+\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;
+\chyperlink\ctint255\cshade255\red0\green0\blue255;}{\*\defchp \fs22\loch\af31506\hich\af31506\dbch\af31505 }{\*\defpap \ql \li0\ri0\sa200\sl276\slmult1\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 }\noqfpromote {\stylesheet{
+\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1041\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp1041 \snext0 \sqformat \spriority0 Normal;}{
+\s1\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\outlinelevel0\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1041\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp1041 \sbasedon0 \snext0 \slink15 \sqformat 
+heading 1;}{\s2\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\outlinelevel1\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1041\loch\f1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp1041 
+\sbasedon0 \snext0 \slink16 \sqformat heading 2;}{\*\cs10 \additive \ssemihidden \sunhideused \spriority1 Default Paragraph Font;}{\*
+\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv \ql \li0\ri0\sa200\sl276\slmult1
+\widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af31507\afs22\alang1025 \ltrch\fcs0 \fs22\lang4105\langfe1041\loch\f31506\hich\af31506\dbch\af31505\cgrid\langnp4105\langfenp1041 \snext11 \ssemihidden \sunhideused 
+Normal Table;}{\*\cs15 \additive \rtlch\fcs1 \ab\af31503\afs32 \ltrch\fcs0 \b\fs32\lang1033\langfe0\kerning32\loch\f31502\hich\af31502\dbch\af31501\langnp1033 \sbasedon10 \slink1 \slocked \spriority9 Heading 1 Char;}{\*\cs16 \additive \rtlch\fcs1 
+\ab\ai\af31503\afs28 \ltrch\fcs0 \b\i\fs28\lang1033\langfe0\loch\f31502\hich\af31502\dbch\af31501\langnp1033 \sbasedon10 \slink2 \slocked \ssemihidden \spriority9 Heading 2 Char;}{\*\cs17 \additive \rtlch\fcs1 \af0 \ltrch\fcs0 \ul\cf17 
+\sbasedon10 \sunhideused \styrsid3348295 Hyperlink;}}{\*\rsidtbl \rsid419830\rsid3348295\rsid11937177}{\mmathPr\mmathFont34\mbrkBin0\mbrkBinSub0\msmallFrac0\mdispDef1\mlMargin0\mrMargin0\mdefJc1\mwrapIndent1440\mintLim0\mnaryLim1}{\info{\operator Darius}
+{\creatim\yr2012\mo1\dy24\hr9\min35}{\revtim\yr2012\mo1\dy24\hr9\min46}{\version2}{\edmins11}{\nofpages22}{\nofwords4758}{\nofchars27123}{\nofcharsws31818}{\vern49247}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}
+\paperw12240\paperh15840\margl1440\margr1440\margt1440\margb1440\gutter0\ltrsect 
+\deftab709\widowctrl\ftnbj\aenddoc\trackmoves0\trackformatting1\donotembedsysfont0\relyonvml0\donotembedlingdata1\grfdocevents0\validatexml0\showplaceholdtext0\ignoremixedcontent0\saveinvalidxml0\showxmlerrors0\horzdoc\dghspace120\dgvspace120
+\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3\jcompress\viewkind1\viewscale100\rsidroot3348295 \fet0{\*\wgrffmtfilter 2450}\ilfomacatclnup0\ltrpar \sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}
+{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}
+{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9
+\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain \ltrpar\s2\ql \li0\ri0\sb200\sl480\slmult1\keep\keepn\nowidctlpar\wrapdefault\faauto\outlinelevel1\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 
+\fs24\lang1033\langfe1041\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp1041 {\rtlch\fcs1 \ab\af1\afs36 \ltrch\fcs0 \b\fs36\cf1\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Extreme Programming
+\par }\pard\plain \ltrpar\ql \fi360\li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 \rtlch\fcs1 \af1\afs24\alang1025 \ltrch\fcs0 \fs24\lang1033\langfe1041\loch\af1\hich\af1\dbch\af31505\cgrid\langnp1033\langfenp1041 {\rtlch\fcs1 
+\ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 CMPT 475 Spring 2012
+\par }{\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+Christopher Tse        |    cta16@sfu.ca      |    556001847}{\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Dominic Renaud  \tab |    }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf1\lang255\langfe1041\langnp255\insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1 HYPERLINK "mailto:dvr@sfu.ca" }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf1\lang255\langfe1041\langnp255\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b3c0000006d00610069006c0074006f003a0064007600720040007300660075002e00630061000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af0 \ltrch\fcs0 
+\f0\cf1\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af0\dbch\af31505\loch\f0 dvr@sfu.ca}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \cf1\lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1  
+\tab |    301063898}{\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Brandon Mak\tab |    bjm7@sfu.ca\tab |    301058096
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par \hich\af1\dbch\af31505\loch\f1 Darius Yao\tab \tab |\tab }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 dariusy@sfu.ca}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \tab \hich\af1\dbch\af31505\loch\f1 |\tab 
+301008959
+\par }\pard \ltrpar\ql \fi360\li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af0\afs96 \ltrch\fcs0 \f0\fs96\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }{\rtlch\fcs1 \ab\af1\afs72 \ltrch\fcs0 \b\fs72\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 FILL IN YOUR INFO
+\par }{\rtlch\fcs1 \af0\afs22 \ltrch\fcs0 \f0\fs22\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\insrsid11937177 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Table of Contents
+\par \hich\af1\dbch\af31505\loch\f1 1. Introduction
+\par \hich\af1\dbch\af31505\loch\f1 2. Practices
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.1. User Stories & User Acceptance Tests
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.1.1. Analysis
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.2. Iterative Development
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.2.1 Analysis
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.3. Iteration Planning
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.4. }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Open work spaces}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \tab \hich\af1\dbch\af31505\loch\f1 2.4.1. Analysis}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.5. Standing meetings
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.5.1. Analysis
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.6. Simplicity
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.7. }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Pair Programming
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.7.1 Analysis}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.8. Frequent Integration
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.8.1. Analysis}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par \tab \hich\af1\dbch\af31505\loch\f1 2.9 Unit Tests
+\par \tab \tab \hich\af1\dbch\af31505\loch\f1 2.9.1. Analysis}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295\charrsid3348295 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 3. Conclusion
+\par \hich\af1\dbch\af31505\loch\f1 4. Glossary}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 5. Bibliography}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 1. Introduction}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Extreme Programming is a relatively new software development methodology f\hich\af1\dbch\af31505\loch\f1 
+ocused on producing software that can be quickly tested and that is as complete as possible at every step, rather than just at the end of the project. It emphasizes teamwork between the developers and the client, and adapts to client feedback on the proje
+\hich\af1\dbch\af31505\loch\f1 c\hich\af1\dbch\af31505\loch\f1 t[3]. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Unlike in the waterfall method of software development, Extreme Programming sets out the initial requirements very loosely. Scheduling of development is done on a regular basis, rather than all at the start, and the features to be developed are det
+\hich\af1\dbch\af31505\loch\f1 
+ermined based on current priorities and customer feedback, rather than the initial plan. This allows for the flexibility to handle unexpected changes to customer requirements, or to manage misinterpretations of the requirements as initially laid out befor
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1  the product has shipped.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2. Practices }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+There are many simple rules and practices that make up Extreme Programming. This essay will only cover a handful of them. They are what makes Extreme Programming, and as such should be followed by teams who want to\hich\af1\dbch\af31505\loch\f1 
+ develop in this methodology. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.1. User Stories & User Acceptance Tests}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \fi720\li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+In XP, requirements elicitation is done entirely though User Stories.  In contrast to other methods of requirements engineering, User Stories allow the customer and programmer to ove\hich\af1\dbch\af31505\loch\f1 \hich\f1 
+rcome problems with understanding.   When a customer \'93\loch\f1 \hich\f1 tells a story about how the system will be used\'94\loch\f1 
+ ([5], pg. 16), the requirements contain more background context allowing the programmers to understand the problem better.  This allows programmers to a\hich\af1\dbch\af31505\loch\f1 s\hich\af1\dbch\af31505\loch\f1 
+k more effective questions about the system to be developed to gain more insight into the problem.  After the exchange of stories and questions the customer may feel that the initial story he or she started with is not satisfactory and will revise it.  Th
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1  continued revision of the story brings initially hidden requirements into light.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+If a Story is too large it is split up into smaller segments because programmers have more accurate estimates for smaller problems.  As recommended by one of the founders of\hich\af1\dbch\af31505\loch\f1 \hich\f1  XP, Ron Jeffries states in his book: \'93
+\loch\f1 \hich\f1 stories should encompass a week or two of programmer time\'94\loch\f1  ([5], pg. 18).  For planning purposes this helps the development team stay as close to their estimated schedule as possible.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 After the implementation is comp\hich\af1\dbch\af31505\loch\f1 
+lete, Acceptance Tests are performed to verify the system indeed satisfies the system described in the user story.  Like other development models, the purpose of Acceptance Tests remain the same \hich\f1 \endash \loch\f1 
+ to allow the customer to verify the system performs as des\hich\af1\dbch\af31505\loch\f1 i\hich\af1\dbch\af31505\loch\f1 
+red and to raise confidence in all the project stakeholders.  However, Acceptance Tests also have another crucial role unique to XP.  The XP model reduces the amount of documentation necessary by working in reverse; rather than writing the documentation f
+\hich\af1\dbch\af31505\loch\f1 i\hich\af1\dbch\af31505\loch\f1 
+rst and deriving test cases from it, XP instead uses the test cases to derive what documentation is necessary.  This model allows programmers to begin developing a system prior to heavy paperwork, and at the final stage only the relevant documentation wil
+\hich\af1\dbch\af31505\loch\f1 l\hich\af1\dbch\af31505\loch\f1  surface.  Being agile in nature, XP demands that all tests \hich\f1 \endash \loch\f1  Acceptance and Unit Tests \hich\f1 \endash \loch\f1  are automated.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.1.1 Analysis}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The method of using User Stories is an interesting approach.  On first impression it seems the developers may receive unnecessary information.  More traditional software approaches required the customer to only specify what the system must do, and program
+\hich\af1\dbch\af31505\loch\f1 m\hich\af1\dbch\af31505\loch\f1 \hich\f1 ers were free to implement it with any desired strategy.  Asking someone to \'93\loch\f1 make this for me, and I don\hich\f1 \rquote \loch\f1 \hich\f1 t care how you do it\'94
+\loch\f1  makes sense as we normally would not expect the client to have much understanding on the technical aspects of development, and t\hich\af1\dbch\af31505\loch\f1 h\hich\af1\dbch\af31505\loch\f1 
+ose decisions would be better left for the developer to deal with.  Although User Stories take more commitment by both parties \hich\f1 \endash \loch\f1  customer and developer \hich\f1 \endash \loch\f1 
+ due to the amount of communication that must be maintained, the process of writing and revising Stori\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 
+s helps the customer understand the product truly desired and helps expose details that may have initially been omitted.  By the same token, when a user story explains in detail the what, where, why, who, and how, it allows the developers to make more inf
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 rmed decisions during the implementation stage.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1  The role of user Acceptance Tests strongly enforces the paradigm of XP \hich\f1 \endash \hich\af1\dbch\af31505\loch\f1 
+ a model that is adaptive rather than predictive.  In waterfall models, development parties invest too many resources in analyzing the system and the runtime environments to discover all potential roadblocks.  It is difficult or near impossible to tabulat
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 
+ every possible constraint, and there are likely to be constraints that are irrelevant to the current iteration of the system.  By using Acceptance Tests at each stage to uncover the requirements, only currently relevant documentation is kept.  This level
+\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 of abstraction also allows the development team to focus on the current User Story at hand, and this leads to a cohesive development system.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par }\pard \ltrpar\ql \fi720\li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+XP has a heavy focus on testing, demanding all tests be automated and running them on the system frequently.  Due t\hich\af1\dbch\af31505\loch\f1 o XP\hich\f1 \rquote \loch\f1 
+s nature in welcoming change, it is important to have lower level modules performing at the highest quality.  This allows higher level models to be switched with another when requirements change, and developers will have confidence that the lower lev
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 \hich\f1 
+l system will continue to maintain its stability.  That is not to say lower level modules need not be tested when the system as a whole undergoes change (take Ariadne 5 for example).  But as software engineers, we generally do not \'93\loch\f1 \hich\f1 
+reinvent the wheel\'94\loch\f1 , an\hich\af1\dbch\af31505\loch\f1 d\hich\af1\dbch\af31505\loch\f1 
+ we always use previously developed modules as a basis.  For example, when we develop in a programming language, pinpointing the location of an error becomes easier when we can trust our compiler, because we know the error is within our own code rather th
+\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 
+n underlying systems.  This optimism may not be applicable to large scale projects because of the amount of coupling necessary resulting in a more complex system, but XP is not an effective methodology when the project size is large due to face to face co
+\hich\af1\dbch\af31505\loch\f1 m\hich\af1\dbch\af31505\loch\f1 munication losing effectiveness.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.2. Iterative Development [10]}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+A core component of Extreme Programming is Iterative Development. Instead of development being scheduled across an entire release plan, it is scheduled into 1-3 week iterations, which are o\hich\af1\dbch\af31505\loch\f1 
+rganized immediately before being worked on. It allows for unforeseen feature requests or requirements issues to be handled when they come up, rather than waiting until the end of the project, or requiring clairvoyant planning teams.}{\rtlch\fcs1 \ab\af1 
+\ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 The structure of Iter\hich\af1\dbch\af31505\loch\f1 ation is fairly simple. Take the highest priority features than can be done in the iteration length 
+\loch\af1\dbch\af31505\hich\f1 \u9472\'2d\hich\af1\dbch\af31505\loch\f1  usually one week, but could be as long as three \loch\af1\dbch\af31505\hich\f1 \u9472\'2d\hich\af1\dbch\af31505\loch\f1 
+ and put them together as the iteration plan. These features are exclusively what will be done in the nex\hich\af1\dbch\af31505\loch\f1 
+t iteration. If the features needed to be done seem to be taking too long, re-plan in the middle of the iteration to determine which features can be pushed back. Once the iteration is done, the current version of the product should be tested with the cust
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 mer, to ensure that the project remains on track. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+It is crucial that the iteration be taken as a hard deadline. While extreme programming is much more conducive to floating deadlines for the entire project, the iterations need to stay on track.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.2.1. A\hich\af1\dbch\af31505\loch\f1 nalysis }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The primary benefit to iterative development is that the project is being continuously revised to respond and adapt to the customer's needs. There is less concern about requirements as well, as these can be reviewed more easily once parts of the 
+\hich\af1\dbch\af31505\loch\f1 system are in place and thus there is a more concrete perspective on the system. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+An element that is somewhat ambiguous is that iterations are the level at which flexibility and adaptability essentially stop. This is good because it provides structure to \hich\af1\dbch\af31505\loch\f1 
+the project, but may be problematic if the time per iteration is too large to adapt effectively, or too small to allow for the long-term planning of a project to be useful, such as in a large team or with a military or government project, where the requir
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 
+ments may not be as likely to change with use. How this affects development varies greatly from project to project, and is a key aspect of extreme programming that needs to be carefully considered during the initial project planning, when determining the 
+\hich\af1\dbch\af31505\loch\f1 d\hich\af1\dbch\af31505\loch\f1 evelopment methodology.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The downside to iterative development is that it can be short-sighted. While this can be mitigated for really large features by breaking them down, or simply making them be built across iterations, this may not always work. Dependi
+\hich\af1\dbch\af31505\loch\f1 
+ng on how set in stone the requirements are, constant revisions and changes may cause large or complex features to be put off continuously. It is important to ensure that features are being added to iterations based on priority as well as feasibility with
+\hich\af1\dbch\af31505\loch\f1 i\hich\af1\dbch\af31505\loch\f1 n the time frame.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.3. Iteration Planning [11]}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Planning in XP is primarily handled on a per-iteration basis, treating the iteration as a more solid unit than the plan for the whole release. This is the point where the flexibility of XP goes away and the \hich\af1\dbch\af31505\loch\f1 
+plan becomes set. While there are times where features can end up rolling over to the next iteration, the iteration end date is meant to be a hard deadline.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 For planning the release, there should be enough features chosen for the iteration such that the f\hich\af1\dbch\af31505\loch\f1 
+eatures can be completed in the time given, provided that nothing goes wrong. This should be determined by figuring out how many days it would take to do the feature if there were no distractions, referred to as ideal programming days. If it takes less th
+\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 
+n 1 day, group them together. If it takes more than 3 days, break them apart. Once you have a good idea how long each feature will take then the whole iteration can be evaluated. At this stage, if there are too many features, put off some of the lower pri
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 rity ones until the following iteration. If those that exist would likely be completed within the time of the iteration with time to spare, then add more features to the iteration. }{
+\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 When planning iterations, it is also very important to take a look back a\hich\af1\dbch\af31505\loch\f1 
+nd see how many features got completed during the previous iteration, and use that to determine how quickly features can realistically be completed, and thus how many features should be on the next iteration. It is worth keeping track of how much time was
+\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 
+taken to build a feature compared to how much time was estimated, and also how much time was taken up by fixing bugs. Bug fixing time is less predictable, and doesn't fit into the idea of the ideal programming day. However, if a feature took longer becaus
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 
+ its completion time was poorly estimated, then that is something which needs to be considered more carefully going forward. It takes several iterations before it is possible to have an accurate estimate of how quickly features can be completed, and thus 
+\hich\af1\dbch\af31505\loch\f1 h\hich\af1\dbch\af31505\loch\f1 
+ow many features can be put into a single iteration. So long as there is a critical eye to the amount of time features take, then the time taken to accurately measure how quickly work can be done is minimized.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.4. Open work spaces}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \fi360\li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Communication is the mo
+\hich\af1\dbch\af31505\loch\f1 
+st important aspect in any team.  Teams often consist of many unique individuals with different levels of experience and strengths. If teammates do not communicate, then they cannot utilize the full potential of the team. Open Work Spaces addresses the pr
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 blem by creating an environment where everyone is comfortable to communicate [1].}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+An example of an Open Work Space is the Japan Airlines office. The CEO of JAL sits at a desk that is on the same floor as many other employees without any walls surrounding h\hich\af1\dbch\af31505\loch\f1 im. Many of his employees share desks and don
+\hich\f1 \rquote \loch\f1 t have a wall dividing them either. By working in the same environment, the gap between different levels and management are not as apparent [1]. This allows employees from all levels to comfortably communicate.
+\hich\af1\dbch\af31505\loch\f1  Other examples of Open Work Spaces include offices of Facebook and Google. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Different people have different preferences in the way they communicate.  In order to encourage interaction even further, Open Work Spaces allows many forms of communications. Th\hich\af1\dbch\af31505\loch\f1 
+e various forms may include white boards, sticky notes, charts, and other forms of communication [1]. By providing different ways in which teammates can communicate, all teammates can contribute in a way that they are comfortable with [1].  For example, i
+\hich\af1\dbch\af31505\loch\f1 f\hich\af1\dbch\af31505\loch\f1 
+ a teammate is not comfortable talking in a large group, they can use sticky notes to add to any ideas. Work stations can also be individual or in a cluster to allow teammates to choose how they want to work without excluding themselves from the team [1].
+}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.4.1. Analysis}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Open Work Spaces works in conjunction with other XP components such as Standing Meetings and Pair Programming. The Open Work Space allows everyone to participate in meetings wherever they are in the office. In addition, the location of th
+\hich\af1\dbch\af31505\loch\f1 
+e Standing Meeting will create a centralized location where everyone can discuss ideas. Open Work Spaces also optimizes Pair Programming because it allows different groups of Pair Programmers to participate in other Pair Programming discussions [9].
+
+\par \tab \hich\af1\dbch\af31505\loch\f1 
+Although Open Work Spaces has many advantages, it is also important to address potential issues that will make the team ineffective. One of these concerns is Privacy [9]. Without privacy, some team members may feel that they cannot work comfortably [9]. H
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 wever, the lack of privacy will encourage the interaction between team members and remove the idea that a certain team member \hich\f1 \lquote \loch\f1 owns\hich\f1 \rquote \loch\f1 
+ a certain part of the project. Distractions are another issue that might affect the performance of the teammates [9]. When\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 
+many groups are discussing strategies, it may be difficult for team members to concentrate. However, studies have shown that team members will adapt to this by automatically filtering out any unnecessary discussions [9].}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par 
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.5. Standing meetings [12]}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 An im\hich\af1\dbch\af31505\loch\f1 
+portant component of any XP project is starting the day with a Standing Meeting. These need to be conducted in a fairly central location, and should be short. The point is to keep everyone up to date on what everyone is doing, and to point out any issues 
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1 hat may need discussion after the standup meeting. }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The structure for these meetings is to go around to each of the developers, and have them talk briefly about what they did yesterday, what they plan to do today, and what obstacles they are having in com\hich\af1\dbch\af31505\loch\f1 
+pleting their job. This allows other developers to understand where the team is at. It also gives opportunities to bring up quick fixes to small issues, or let someone know if they are a bottleneck on part of the project, so they can re-prioritize appropr
+\hich\af1\dbch\af31505\loch\f1 i\hich\af1\dbch\af31505\loch\f1 ately. It is important that these discussions are kept brief. If they require more 1-on-1 or small group discussion they should be done after the Standing Meeting is over. }{\rtlch\fcs1 
+\ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 It is important that these meetings are conducted regularly. If they are not then \hich\af1\dbch\af31505\loch\f1 
+it is easy for the developers to lose a clear picture of what everyone else is working on, and thus makes future communication with team members more difficult. It also means that more meetings are needed between small groups which can eat more time than 
+\hich\af1\dbch\af31505\loch\f1 n\hich\af1\dbch\af31505\loch\f1 
+ecessary if there was the Standing Meeting in the morning. The time constraint on the Standing Meeting encourages quick action and no time wasted, while meetings in smaller groups can get sidetracked by certain ideas or discussions, as they aren't necessa
+\hich\af1\dbch\af31505\loch\f1 r\hich\af1\dbch\af31505\loch\f1 ily as constrained.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Another important but non-critical part of Standing Meetings is a whiteboard. With a whiteboard that has the schedule for the team for the iteration cycle, there is a reference point for the activities the developers are doing. When th
+\hich\af1\dbch\af31505\loch\f1 
+ey bring up their activity the previous day and their plans for the day, they can be compared with the whiteboard schedule, which can either cause the developer to change their priorities, or cause the whiteboard schedule to change in response to their ac
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1 ivities, which may have been critical bug fixes or simply an increase in the amount of time it is taking to build the feature they are currently working on.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.5.1. Analysis}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 The main benefit to Standing Meetings is synchronization with the team. Knowing w\hich\af1\dbch\af31505\loch\f1 
+here everyone else is in the project is good both for knowing how well the scheduling is working for the iteration, and for morale. Constant reassurance that everyone on the team is doing their job, and that they are willing to help with any obstacles tha
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1  might come up for development, is a great way to keep a team together and motivated. It also ensures that any problems which come up will be resolved by the next morning at the latest.}{
+\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang9\langfe1041\langnp9\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The downside to Standing Meetings is that they do take some time, and\hich\af1\dbch\af31505\loch\f1 
+ require some discipline in remembering to do them and in keeping track of what work has been done. This isn't a major con, it just means you must maintain disciplined.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang9\langfe1041\langnp9\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.6. Simplicity }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 \hich\f1 Software development has a phrase called \'93\loch\f1 \hich\f1 Keep It Simple Stupid\'94\loch\f1  (KI\hich\af1\dbch\af31505\loch\f1 
+SS), it helps others with understanding your code and would generally make the overall program more maintainable. XP takes this a step further and includes it as a functional requirement instead of a guideline. Simple functions are easier to maintain, cre
+\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 te, and modify.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 \hich\f1 Accompanying the new importance of Simplicity are four subjective qualities: \'93\loch\f1 \hich\f1 Testable, Understandable, Browsable, and Explainable (TUBE)\'94
+\loch\f1 .[2]. The qualities are familiar but are now more important in XP.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Testing is a fundamental part of \hich\af1\dbch\af31505\loch\f1 
+any software design. It is made to ensure quality and proper functionality in a product. So with every simple function being written a corresponding acceptance and Unit Test must be done. This will help with quick feedback and design changes if necessary.
+}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Browse-ability is a somewhat newer concept, but can be summed up with naming conventions. To make a developer\hich\f1 \rquote \loch\f1 
+s life easier it is always good to find useful names for given functions, classes, or variables such that it would help with documentation and e\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 
+se of use. This also helps with inheritance. For example, if you have a base class person and you want to branch off into employees, managers, and other types it would be easily understood by others analyzing the documents.}{\rtlch\fcs1 \ab\af1 
+\ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Understandable and explainable \hich\af1\dbch\af31505\loch\f1 
+can be grouped together. Understandability will come with time spent on a project, whereas the more important focus is the ability to explain the project ideas. For example if a person recently joined the team and has no idea what is going on. It would he
+\hich\af1\dbch\af31505\loch\f1 l\hich\af1\dbch\af31505\loch\f1 p if your functions and methods are easily communicated to the confused individual.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 To keep things simple and easier it helps to only program functions and methods only when you need them. XP tells us to refrain from creating complex methods that achieve 
+\hich\af1\dbch\af31505\loch\f1 multiple goals. Focus on writing one method for one goal and making it understandable.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.7. Pair Programming}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \fi720\li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+Pair Programming is an essential part of XP. A team of programmers can use Pair Programming by pairing up programmers of various skill levels. Bot\hich\af1\dbch\af31505\loch\f1 
+h programmers share one computer [8]. While one programmer codes, the other looks over the code for any errors as well as conceptualizing the general form of the solution [6]. The programmers should also discuss their strategy at all times to ensure that 
+\hich\af1\dbch\af31505\loch\f1 t\hich\af1\dbch\af31505\loch\f1 hey both understand the problem specification and their own solution [6]. The two programmers can switch roles at any time.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+The first advantage of Pair Programming is the increased productivity of the programmers and the improved quality of the product [6\hich\af1\dbch\af31505\loch\f1 
+]. Pair programming can improve productivity in three ways. The programmers become more efficient because they waste less time [6]. Instead of surfing the internet or checking their email, they are motivated to work. If one person is stuck on a problem, b
+\hich\af1\dbch\af31505\loch\f1 o\hich\af1\dbch\af31505\loch\f1 
+th programmers can discuss possible solutions or switch roles. This ensures that both programmers are doing something constructive.  Also, since one programmer is continuously reviewing the code, there is a greater chance that a bug will be discovered and
+\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 removed [6]. This will reduce the amount of time spent testing and finding the bug. Lastly, there is a lower number of fragmented code that needs to be merged between groups. }{\rtlch\fcs1 
+\ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Another advantage of Pair programming is that both programmers become better pr\hich\af1\dbch\af31505\loch\f1 
+ogrammers after each session [6]. Every programmer is different in skill level and use different methods to solve the same problem. When programmers discuss with other programmers their strategies, they can discover the disadvantages or advantages of solv
+\hich\af1\dbch\af31505\loch\f1 i\hich\af1\dbch\af31505\loch\f1 
+ng the problem in another way.  By discussing the problems, each programmer can also get a better understanding of the problem and how well their solution solves the problem.  Pair programming works well with Open Work Spaces because it allows Pair Progra
+\hich\af1\dbch\af31505\loch\f1 m\hich\af1\dbch\af31505\loch\f1 ming groups to overhear discussions from other groups [4]. This encourages communication between groups. The result is a more cohesive team and software [4]. 
+\par 
+\par \hich\af1\dbch\af31505\loch\f1 2.7.1 Analysis}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\lang4105\langfe1041\langnp4105\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Some programmers are more experienced than others. It is easy to see how the les\hich\af1\dbch\af31505\loch\f1 
+s experienced programmer will benefit from this form of programming because the programmer with more experience can spot mistakes made by the other programmer. However, the programmer with more experience can also benefit from this form of programming bec
+\hich\af1\dbch\af31505\loch\f1 a\hich\af1\dbch\af31505\loch\f1 use they can get a fresh perspective on a problem that they had never considered [6].  }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.8. Frequent Integration}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \fi720\li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+For ease of integration, developers (in pairs) during the construction phase must get in the habit of submitting code to the repository as frequent as possible. This will ensure that there will be little fragmentation in the development process and minima
+\hich\af1\dbch\af31505\loch\f1 l\hich\af1\dbch\af31505\loch\f1  code diversion. If this is not done often the inconsistencies would cause a significant increase in time spent integrating when large sections of code and functionality are added.}{
+\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Frequent Integration helps identify potential conflicts earlier so that pro
+\hich\af1\dbch\af31505\loch\f1 
+jects can be quickly redesigned and adapt to the new needs of the application. Though this may sound tedious it may prove more convenient than to try and integrate weeks of separate functions together causing fragmentation of versions and potential requir
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 ment changes done by other team of developers.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Frequent Integration is highly encouraged and a fundamental part of keeping fr\hich\af1\dbch\af31505\loch\f1 
+agmentation to a minimum. It is still good to note that a single pair of coders should be integrating their code with the full project repository per few hours of coding. Ensuring that different pairs of developers submit code at different times will prev
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 
+nt conflicting code testing. During the Standing Meeting there should be some discussion of estimated completion of parts of code for integration. Having a good idea of when new code is about to be integrated will help ensure future commits of code will b
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1  current and up to date.\tab  }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 2.8.1. Analysis}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+With the constant updates it will be easier to gauge how far the progress of the overall project is going. The iterative nature of the integration helps with efficiency of the overall project development. The us\hich\af1\dbch\af31505\loch\f1 
+ers will have tested code more frequently and there would be less integration fixes causing delays in the development of other teams of developers. Frequent Integration also promotes communication with other pairs of developers so the entire team can make
+\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1 some assumptions to what is to be expected during integration.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 
+Though the idea of Frequent Integration is simple, it requires a lot of discipline and communication to accomplish. This approach for programming would most likely thrive in small project envi\hich\af1\dbch\af31505\loch\f1 
+ronment involving few pairs of developers. If this was applied to a larger project involving more people, it could be hard to set times for integration due to the sheer increase in commits.
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par \hich\af1\dbch\af31505\loch\f1 2.9 Unit Tests
+\par }\pard \ltrpar\qj \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid3348295 {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid3348295 \tab }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 
+As an agile paradigm, it is imperative for systems \hich\af1\dbch\af31505\loch\f1 developed in XP \hich\af1\dbch\af31505\loch\f1 to be as \hich\af1\dbch\af31505\loch\f1 robust\hich\af1\dbch\af31505\loch\f1  as possi\hich\af1\dbch\af31505\loch\f1 
+ble in order to avoid lengthy delays caused by uncaught errors when development on the next iteration begins.  The longer an error continues undetected,\hich\af1\dbch\af31505\loch\f1 
+ the costlier it becomes to fix the further we are in the development cycle.  XP\hich\f1 \rquote \loch\f1 
+s testing principles adhere to minimizing stalls in development and minimizing costs by rectifying errors as early as possible.  This is all done during the unit test.
+\par \tab \hich\af1\dbch\af31505\loch\f1 In XP \hich\af1\dbch\af31505\loch\f1 unit tests are written simultaneously with the code\hich\af1\dbch\af31505\loch\f1 .  \hich\af1\dbch\af31505\loch\f1 By w\hich\af1\dbch\af31505\loch\f1 riting unit tests 
+\hich\af1\dbch\af31505\loch\f1 before the code, you may miss some test cases that become necessary depending on your code implementation.  Similarly, writing unit tests after the code is not a practical approach\hich\af1\dbch\af31505\loch\f1 
+ because you have to mentally keep track of what tests are needed at which sections of code, and it is highly likely a test case will be forgotten.  When writing test cases simultaneously with the code, test cases are generated when they are immediately n
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 cessary (when writing methods for an object class for example).   The lists of test cases are run all the time, and whenever a new test is formed, it is added to the list.  
+\hich\af1\dbch\af31505\loch\f1 When tests are performed rapidly, the location of an error is much easier to find \hich\f1 \endash \hich\af1\dbch\af31505\loch\f1 
+ in most cases it would be located only within the most recent changes to the code.  This is analogous to the strategy new developers use where they compile their code frequently whenever changes are made.  \hich\af1\dbch\af31505\loch\f1 T
+\hich\af1\dbch\af31505\loch\f1 he list of test cases \hich\af1\dbch\af31505\loch\f1 grow\hich\af1\dbch\af31505\loch\f1 s\hich\af1\dbch\af31505\loch\f1  extremely quickly, a\hich\af1\dbch\af31505\loch\f1 
+nd that leads to why XP demands all tests be automated.
+\par \tab \hich\af1\dbch\af31505\loch\f1 When unit tests consistently pass with 100% success, it is easier to integrate components together.  In the long run, it will make newer iterations easier to develop since it has a stable codebase.  
+\hich\af1\dbch\af31505\loch\f1 Occasionally an acceptance test may reveal an error \hich\f1 \endash \loch\f1 
+ this indicates that a test case was missing.  Uncovering the missing test case may lead to new tests cases also.  In XP, a product is not released until all unit and acceptance tests have 100% success \hich\af1\dbch\af31505\loch\f1 r
+\hich\af1\dbch\af31505\loch\f1 ates.
+\par \tab \hich\af1\dbch\af31505\loch\f1 \hich\f1 Ron Jeffries frequently used the phrase \'93\loch\f1 Everyth}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 \hich\f1 ing That Could Possibly Break\'94\loch\f1  
+\hich\af1\dbch\af31505\loch\f1 [5] }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 for guidance in deciding what to test.  There are some methods that are simply indestructible (such as accessor methods) that don\hich\f1 
+\rquote \loch\f1 t need t\hich\af1\dbch\af31505\loch\f1 o be tested.  }{\rtlch\fcs1 \af37 \ltrch\fcs0 \insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 \hich\f1 Deciding what to omit from testing takes experience, but Jeffries claims \'93}{
+\rtlch\fcs1 \af37 \ltrch\fcs0 \cf1\chshdng0\chcfpat0\chcbpat8\insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 \hich\f1 There are more things that couldn't possibly break than you might imagine\'94\loch\f1  (}{\rtlch\fcs1 \af37 \ltrch\fcs0 
+\cf1\chshdng0\chcfpat0\chcbpat8\insrsid3348295 \hich\af1\dbch\af31505\loch\f1 [5]}{\rtlch\fcs1 \af37 \ltrch\fcs0 \cf1\chshdng0\chcfpat0\chcbpat8\insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 , pg. 153)}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\insrsid3348295 \hich\af1\dbch\af31505\loch\f1  and an adequate amount of time might be saved from n\hich\af1\dbch\af31505\loch\f1 ot having to write unnecessary test cases.}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 2.9.1 }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295\charrsid3348295 \hich\af1\dbch\af31505\loch\f1 Analysis
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \tab \hich\af1\dbch\af31505\loch\f1 
+The strategies of unit testing are not unique to XP; they are common testing strategies employed by various methodologies to ensure a high quality product.  Even non-iterative methods such as the waterfa\hich\af1\dbch\af31505\loch\f1 
+ll model employ the same testing strategies.  In order to reduce costs, it is important to resolve an issue as early as possible after it is introduced, and all modern software models have accommodated this into their practices.
+\par }\pard \ltrpar\qj \fi720\li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid3348295 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 XP\hich\af1\dbch\af31505\loch\f1  development differs from
+\hich\af1\dbch\af31505\loch\f1  iterative development in one aspect\hich\af1\dbch\af31505\loch\f1  however\hich\af1\dbch\af31505\loch\f1 
+: the error tolerance.  XP strives for quality and does not allow a system release until tests pass at 100%, but in iterative development there}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1  are situations where a product }{
+\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 is released pre-maturely because of d\hich\af1\dbch\af31505\loch\f1 eadlines \hich\af1\dbch\af31505\loch\f1 due to \hich\af1\dbch\af31505\loch\f1 
+marketing strategy.  The errors would then be corrected in a future }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 update}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 
+.  This leads me to believe that XP is ideal when the development team is working one-to-one with a client}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 .}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1  }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 In contrast, }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 traditional iterative development is more practical\hich\af1\dbch\af31505\loch\f1 
+ when your consumer base i}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1 s shared among \hich\af1\dbch\af31505\loch\f1 other developers.\hich\af1\dbch\af31505\loch\f1  \hich\af1\dbch\af31505\loch\f1  When 
+\hich\af1\dbch\af31505\loch\f1 the release of }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid419830 \hich\af1\dbch\af31505\loch\f1 a}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 \hich\af1\dbch\af31505\loch\f1  system is not only driven by quality
+\hich\af1\dbch\af31505\loch\f1  but also competitive edge, some XP practices may have to be broken in order to gai\hich\af1\dbch\af31505\loch\f1 n the advantage.}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid3348295 
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid3348295 
+\par }{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 3. Conclusion}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \tab \hich\af1\dbch\af31505\loch\f1 Extreme Programming allows for much adaptation and\hich\af1\dbch\af31505\loch\f1 
+ review of a project before it is shipped to the customer. It can easily cut costs, improve customer satisfaction, and keep a team going strong through a project [3]. It does require some work and discipline, the cooperation of the client, and the right t
+\hich\af1\dbch\af31505\loch\f1 e\hich\af1\dbch\af31505\loch\f1 am. It may not be the best methodology for every project either, but when it can be used, it should be.}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 4. Glossary
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 Acceptance Test \hich\f1 \endash \loch\f1 
+ Allow clients to verify that the product works as intended
+\par \hich\af1\dbch\af31505\loch\f1 Frequent Integration \hich\f1 \endash \loch\f1  The habit of submitting to a repository\hich\af1\dbch\af31505\loch\f1  frequently to reduce fragmentation.
+\par \hich\af1\dbch\af31505\loch\f1 Iteration Planning \hich\f1 \endash \loch\f1  Organizing the schedule and team responsibilities within each integration
+\par \hich\af1\dbch\af31505\loch\f1 Iterative Development \hich\f1 \endash \loch\f1  Scheduling multiple development cycles that consist of implementation and testing instead of spendin\hich\af1\dbch\af31505\loch\f1 
+g a large amount of time testing at the end of the project.
+\par \hich\af1\dbch\af31505\loch\f1 Open Work Spaces \hich\f1 \endash \loch\f1  A large open area where team members work together.
+\par \hich\af1\dbch\af31505\loch\f1 Pair Programming \hich\f1 \endash \loch\f1  Two programmers taking turns working on a computer while discussing possible solutions to a problem.
+\par \hich\af1\dbch\af31505\loch\f1 Stand\hich\af1\dbch\af31505\loch\f1 ing Meetings \hich\f1 \endash \loch\f1  A meeting, typically early in the day, to inform teammates of their progress.
+\par \hich\af1\dbch\af31505\loch\f1 User Stories \hich\f1 \endash \loch\f1  A method used by the client to help the programmer understand the purpose of certain features in a program
+\par }\pard \ltrpar\ql \li0\ri0\sl480\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0 {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par \hich\af1\dbch\af31505\loch\f1 5. Bibliography}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [1]\tab Extreme Programming \hich\af1\dbch\af31505\loch\f1 on Space; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/rules/space.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b7e00000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f007300
+70006100630065002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+http://www.extremeprogramming.org/rules/space.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [2]\tab Extreme Programming on Simplicity; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+HYPERLINK "http://www.extremeprogramming.org/rules/simple.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b8000000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f007300
+69006d0070006c0065002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 http://www.extremeprogrammin
+\hich\af1\dbch\af31505\loch\f1 g.org/rules/simple.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf9\lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1     3}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\up10\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 rd}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1  paragraph.
+\par \hich\af1\dbch\af31505\loch\f1 [3] \tab }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/"}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b5e00000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f000000795881f43b1d7f48af2c825d
+c485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 http://www.extremeprogramming.org/}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 
+\ltrch\fcs0 \ul\cf9\lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1      2}{\rtlch\fcs1 \af1 \ltrch\fcs0 \up10\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 nd}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1  and 3}{\rtlch\fcs1 \af1 \ltrch\fcs0 \up10\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 rd}{\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 \hich\af1\dbch\af31505\loch\f1  paragraph
+\par \hich\af1\dbch\af31505\loch\f1 [4] \tab }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.agilemodeling.com/essays/agileModelingXP.htm"}{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b8800000068007400740070003a002f002f007700770077002e006100670069006c0065006d006f00640065006c0069006e0067002e0063006f006d002f006500730073006100790073002f006100670069006c006500
+4d006f00640065006c0069006e006700580050002e00680074006d000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+http://www.agilemodeling.com/essays/agileModelingXP.htm}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par \hich\af1\dbch\af31505\loch\f1 [5] \tab Extreme Programming Installed (By Ron Jeffries, Ann Anderson, Chet Hendrickson; October 16, 2000)}{\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [6] \tab All I Really Needed to Know about Pair Programming I learned in Kindergarten; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "\hich\af1\dbch\af31505\loch\f1 http://www2.yk.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf"}{\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90bba00000068007400740070003a002f002f0077007700770032002e0079006b002e007000730075002e006500640075002f007e007300670033002f0063006d007000620064003200300035002f006100730073006900
+67006e002f007700650065006b00300031002f00410043004d00610072007400690063006c0065005000610069007200500072006f006700720061006d006d0069006e0067002e007000640066000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 http://www2.yk.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 
+\b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [7]\tab The Art of Agile; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://jamesshore.com/Agile-Book/pair_programming.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b8600000068007400740070003a002f002f006a0061006d0065007300730068006f00720065002e0063006f006d002f004100670069006c0065002d0042006f006f006b002f0070006100690072005f00700072006f00
+6700720061006d006d0069006e0067002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 htt
+\hich\af1\dbch\af31505\loch\f1 p://jamesshore.com/Agile-Book/pair_programming.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [8] \tab Extreme Programming on Pair Programming; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/rules/pair.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b7c00000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f007000
+6100690072002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+http://www.extremeprogramming.org/rules/pair.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [9]\tab \hich\f1 Working Together in \'93\loch\f1 \hich\f1 War Rooms\'94\loch\f1  Doubl\hich\af1\dbch\af31505\loch\f1 es Teams\hich\f1 \rquote 
+\loch\f1  Productivity; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf9\lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.sciencedaily.com/releases/2000/12/001206144705.htm" }{\rtlch\fcs1 \af1 
+\ltrch\fcs0 \ul\cf9\lang255\langfe1041\langnp255\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b9400000068007400740070003a002f002f007700770077002e0073006300690065006e00630065006400610069006c0079002e0063006f006d002f00720065006c00650061007300650073002f003200300030003000
+2f00310032002f003000300031003200300036003100340034003700300035002e00680074006d000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1 www.sciencedaily.com/releases/2000/12/001206144705.htm}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \cf1\lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [10]\tab Extreme Programming on Iterative Development; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/rule\hich\af1\dbch\af31505\loch\f1 s/iterative.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 
+{\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b8600000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f006900
+740065007200610074006900760065002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+http://www.extremeprogramming.org/rules/iterative.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af1 \ltrch\fcs0 \b\cf1\insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [11] \tab Extreme Programming on Iteration Planning; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/rules/iterationplanning.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b9600000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f006900
+7400650072006100740069006f006e0070006c0061006e006e0069006e0067002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 
+\hich\af1\dbch\af31505\loch\f1 http://www.extremeprogramming.org/rules/iterationplanning.\hich\af1\dbch\af31505\loch\f1 html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \af1 \ltrch\fcs0 \insrsid11937177 
+\par }{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang255\langfe1041\langnp255\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 [12]\tab Extreme Programming on Standing Meetings; }{\field{\*\fldinst {\rtlch\fcs1 \af1 \ltrch\fcs0 
+\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 HYPERLINK "http://www.extremeprogramming.org/rules/standupmeeting.html"}{\rtlch\fcs1 \af1 \ltrch\fcs0 \lang4105\langfe1041\langnp4105\insrsid3348295 {\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b9000000068007400740070003a002f002f007700770077002e00650078007400720065006d006500700072006f006700720061006d006d0069006e0067002e006f00720067002f00720075006c00650073002f007300
+740061006e006400750070006d0065006500740069006e0067002e00680074006d006c000000795881f43b1d7f48af2c825dc485276300000000a5ab0000}}}{\fldrslt {\rtlch\fcs1 \af1 \ltrch\fcs0 \ul\cf2\lang4105\langfe1041\langnp4105\insrsid11937177 \hich\af1\dbch\af31505\loch\f1 
+http://www.extremeprogramming.org/rules/standupmeeting.html}}}\sectd \ltrsect\linex0\sectdefaultcl\sftnbj {\rtlch\fcs1 \ab\af0 \ltrch\fcs0 \b\f0\insrsid11937177 
+\par }{\rtlch\fcs1 \af0 \ltrch\fcs0 \f0\insrsid11937177 
+\par }{\*\themedata 504b030414000600080000002100e9de0fbfff0000001c020000130000005b436f6e74656e745f54797065735d2e786d6cac91cb4ec3301045f748fc83e52d4a
+9cb2400825e982c78ec7a27cc0c8992416c9d8b2a755fbf74cd25442a820166c2cd933f79e3be372bd1f07b5c3989ca74aaff2422b24eb1b475da5df374fd9ad
+5689811a183c61a50f98f4babebc2837878049899a52a57be670674cb23d8e90721f90a4d2fa3802cb35762680fd800ecd7551dc18eb899138e3c943d7e503b6
+b01d583deee5f99824e290b4ba3f364eac4a430883b3c092d4eca8f946c916422ecab927f52ea42b89a1cd59c254f919b0e85e6535d135a8de20f20b8c12c3b0
+0c895fcf6720192de6bf3b9e89ecdbd6596cbcdd8eb28e7c365ecc4ec1ff1460f53fe813d3cc7f5b7f020000ffff0300504b030414000600080000002100a5d6
+a7e7c0000000360100000b0000005f72656c732f2e72656c73848fcf6ac3300c87ef85bd83d17d51d2c31825762fa590432fa37d00e1287f68221bdb1bebdb4f
+c7060abb0884a4eff7a93dfeae8bf9e194e720169aaa06c3e2433fcb68e1763dbf7f82c985a4a725085b787086a37bdbb55fbc50d1a33ccd311ba548b6309512
+0f88d94fbc52ae4264d1c910d24a45db3462247fa791715fd71f989e19e0364cd3f51652d73760ae8fa8c9ffb3c330cc9e4fc17faf2ce545046e37944c69e462
+a1a82fe353bd90a865aad41ed0b5b8f9d6fd010000ffff0300504b0304140006000800000021006b799616830000008a0000001c0000007468656d652f746865
+6d652f7468656d654d616e616765722e786d6c0ccc4d0ac3201040e17da17790d93763bb284562b2cbaebbf600439c1a41c7a0d29fdbd7e5e38337cedf14d59b
+4b0d592c9c070d8a65cd2e88b7f07c2ca71ba8da481cc52c6ce1c715e6e97818c9b48d13df49c873517d23d59085adb5dd20d6b52bd521ef2cdd5eb9246a3d8b
+4757e8d3f729e245eb2b260a0238fd010000ffff0300504b03041400060008000000210030dd4329a8060000a41b0000160000007468656d652f7468656d652f
+7468656d65312e786d6cec594f6fdb3614bf0fd87720746f6327761a07758ad8b19b2d4d1bc46e871e698996d850a240d2497d1bdae38001c3ba618715d86d87
+615b8116d8a5fb34d93a6c1dd0afb0475292c5585e9236d88aad3e2412f9e3fbff1e1fa9abd7eec70c1d1221294fda5efd72cd4324f1794093b0eddd1ef62fad
+79482a9c0498f184b4bd2991deb58df7dfbb8ad755446282607d22d771db8b944ad79796a40fc3585ee62949606ecc458c15bc8a702910f808e8c66c69b9565b
+5d8a314d3c94e018c8de1a8fa94fd05093f43672e23d06af89927ac06762a049136785c10607758d9053d965021d62d6f6804fc08f86e4bef210c352c144dbab
+999fb7b4717509af678b985ab0b6b4ae6f7ed9ba6c4170b06c788a705430adf71bad2b5b057d03606a1ed7ebf5babd7a41cf00b0ef83a6569632cd467faddec9
+699640f6719e76b7d6ac355c7c89feca9cccad4ea7d36c65b258a206641f1b73f8b5da6a6373d9c11b90c537e7f08dce66b7bbeae00dc8e257e7f0fd2badd586
+8b37a088d1e4600ead1ddaef67d40bc898b3ed4af81ac0d76a197c86826828a24bb318f3442d8ab518dfe3a20f000d6458d104a9694ac6d88728eee2782428d6
+0cf03ac1a5193be4cbb921cd0b495fd054b5bd0f530c1931a3f7eaf9f7af9e3f45c70f9e1d3ff8e9f8e1c3e3073f5a42ceaa6d9c84e5552fbffdeccfc71fa33f
+9e7ef3f2d117d57859c6fffac327bffcfc793510d26726ce8b2f9ffcf6ecc98baf3efdfdbb4715f04d814765f890c644a29be408edf3181433567125272371be
+15c308d3f28acd249438c19a4b05fd9e8a1cf4cd296699771c393ac4b5e01d01e5a30a787d72cf1178108989a2159c77a2d801ee72ce3a5c545a6147f32a9979
+3849c26ae66252c6ed637c58c5bb8b13c7bfbd490a75330f4b47f16e441c31f7184e140e494214d273fc80900aedee52ead87597fa824b3e56e82e451d4c2b4d
+32a423279a668bb6690c7e9956e90cfe766cb37b077538abd27a8b1cba48c80acc2a841f12e698f13a9e281c57911ce298950d7e03aba84ac8c154f8655c4f2a
+f074481847bd804859b5e696007d4b4edfc150b12addbecba6b18b148a1e54d1bc81392f23b7f84137c2715a851dd0242a633f900710a218ed715505dfe56e86
+e877f0034e16bafb0e258ebb4faf06b769e888340b103d331115bebc4eb813bf83291b63624a0d1475a756c734f9bbc2cd28546ecbe1e20a3794ca175f3fae90
+fb6d2dd99bb07b55e5ccf68942bd0877b23c77b908e8db5f9db7f024d9239010f35bd4bbe2fcae387bfff9e2bc289f2fbe24cfaa301468dd8bd846dbb4ddf1c2
+ae7b4c191ba8292337a469bc25ec3d411f06f53a73e224c5292c8de0516732307070a1c0660d125c7d44553488700a4d7bddd3444299910e254ab984c3a219ae
+a4adf1d0f82b7bd46cea4388ad1c12ab5d1ed8e1153d9c9f350a3246aad01c6873462b9ac05999ad5cc988826eafc3acae853a33b7ba11cd1445875ba1b236b1
+399483c90bd560b0b0263435085a21b0f22a9cf9356b38ec6046026d77eba3dc2dc60b17e92219e180643ed27acffba86e9c94c7ca9c225a0f1b0cfae0788ad5
+4adc5a9aec1b703b8b93caec1a0bd8e5de7b132fe5113cf312503b998e2c2927274bd051db6b35979b1ef271daf6c6704e86c73805af4bdd476216c26593af84
+0dfb5393d964f9cc9bad5c313709ea70f561ed3ea7b053075221d51696910d0d339585004b34272bff7213cc7a510a5454a3b349b1b206c1f0af490176745d4b
+c663e2abb2b34b23da76f6352ba57ca2881844c1111ab189d8c7e07e1daaa04f40255c77988aa05fe06e4e5bdb4cb9c5394bbaf28d98c1d971ccd20867e556a7
+689ec9166e0a522183792b8907ba55ca6e943bbf2a26e52f48957218ffcf54d1fb09dc3eac04da033e5c0d0b8c74a6b43d2e54c4a10aa511f5fb021a07533b20
+5ae07e17a621a8e082dafc17e450ffb739676998b48643a4daa7211214f623150942f6a02c99e83b85583ddbbb2c4996113211551257a656ec1139246ca86be0
+aadedb3d1441a89b6a929501833b197fee7b9641a3503739e57c732a59b1f7da1cf8a73b1f9bcca0945b874d4393dbbf10b1680f66bbaa5d6f96e77b6f59113d
+316bb31a795600b3d256d0cad2fe354538e7566b2bd69cc6cbcd5c38f0e2bcc63058344429dc2121fd07f63f2a7c66bf76e80d75c8f7a1b622f878a18941d840
+545fb28d07d205d20e8ea071b283369834296bdaac75d256cb37eb0bee740bbe278cad253b8bbfcf69eca23973d939b97891c6ce2cecd8da8e2d343578f6648a
+c2d0383fc818c798cf64e52f597c740f1cbd05df0c264c49134cf09d4a60e8a107260f20f92d47b374e32f000000ffff0300504b030414000600080000002100
+0dd1909fb60000001b010000270000007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73848f4d0ac2301484f7
+8277086f6fd3ba109126dd88d0add40384e4350d363f2451eced0dae2c082e8761be9969bb979dc9136332de3168aa1a083ae995719ac16db8ec8e4052164e89
+d93b64b060828e6f37ed1567914b284d262452282e3198720e274a939cd08a54f980ae38a38f56e422a3a641c8bbd048f7757da0f19b017cc524bd62107bd500
+1996509affb3fd381a89672f1f165dfe514173d9850528a2c6cce0239baa4c04ca5bbabac4df000000ffff0300504b01022d0014000600080000002100e9de0f
+bfff0000001c0200001300000000000000000000000000000000005b436f6e74656e745f54797065735d2e786d6c504b01022d0014000600080000002100a5d6
+a7e7c0000000360100000b00000000000000000000000000300100005f72656c732f2e72656c73504b01022d00140006000800000021006b799616830000008a
+0000001c00000000000000000000000000190200007468656d652f7468656d652f7468656d654d616e616765722e786d6c504b01022d00140006000800000021
+0030dd4329a8060000a41b00001600000000000000000000000000d60200007468656d652f7468656d652f7468656d65312e786d6c504b01022d001400060008
+00000021000dd1909fb60000001b0100002700000000000000000000000000b20900007468656d652f7468656d652f5f72656c732f7468656d654d616e616765722e786d6c2e72656c73504b050600000000050005005d010000ad0a00000000}
+{\*\colorschememapping 3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822207374616e64616c6f6e653d22796573223f3e0d0a3c613a636c724d
+617020786d6c6e733a613d22687474703a2f2f736368656d61732e6f70656e786d6c666f726d6174732e6f72672f64726177696e676d6c2f323030362f6d6169
+6e22206267313d226c743122207478313d22646b3122206267323d226c743222207478323d22646b322220616363656e74313d22616363656e74312220616363
+656e74323d22616363656e74322220616363656e74333d22616363656e74332220616363656e74343d22616363656e74342220616363656e74353d22616363656e74352220616363656e74363d22616363656e74362220686c696e6b3d22686c696e6b2220666f6c486c696e6b3d22666f6c486c696e6b222f3e}
+{\*\latentstyles\lsdstimax267\lsdlockeddef0\lsdsemihiddendef1\lsdunhideuseddef1\lsdqformatdef0\lsdprioritydef99{\lsdlockedexcept \lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority0 \lsdlocked0 Normal;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdlocked0 heading 1;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdlocked0 heading 2;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 3;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 4;
+\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 5;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 6;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 7;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 8;\lsdqformat1 \lsdpriority9 \lsdlocked0 heading 9;
+\lsdpriority39 \lsdlocked0 toc 1;\lsdpriority39 \lsdlocked0 toc 2;\lsdpriority39 \lsdlocked0 toc 3;\lsdpriority39 \lsdlocked0 toc 4;\lsdpriority39 \lsdlocked0 toc 5;\lsdpriority39 \lsdlocked0 toc 6;\lsdpriority39 \lsdlocked0 toc 7;
+\lsdpriority39 \lsdlocked0 toc 8;\lsdpriority39 \lsdlocked0 toc 9;\lsdqformat1 \lsdpriority35 \lsdlocked0 caption;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority10 \lsdlocked0 Title;\lsdpriority1 \lsdlocked0 Default Paragraph Font;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority11 \lsdlocked0 Subtitle;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority22 \lsdlocked0 Strong;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority20 \lsdlocked0 Emphasis;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority59 \lsdlocked0 Table Grid;\lsdunhideused0 \lsdlocked0 Placeholder Text;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority1 \lsdlocked0 No Spacing;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading;\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List;\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List;\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List;\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid;\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 1;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 1;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 1;\lsdunhideused0 \lsdlocked0 Revision;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority34 \lsdlocked0 List Paragraph;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority29 \lsdlocked0 Quote;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority30 \lsdlocked0 Intense Quote;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 1;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 1;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 1;\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 2;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 2;\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 3;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 3;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 3;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 3;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 3;\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 3;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 4;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 4;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 4;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 4;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 4;\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 5;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 5;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 5;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 5;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 5;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 5;\lsdsemihidden0 \lsdunhideused0 \lsdpriority60 \lsdlocked0 Light Shading Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority61 \lsdlocked0 Light List Accent 6;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority62 \lsdlocked0 Light Grid Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority63 \lsdlocked0 Medium Shading 1 Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority64 \lsdlocked0 Medium Shading 2 Accent 6;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority65 \lsdlocked0 Medium List 1 Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority66 \lsdlocked0 Medium List 2 Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority67 \lsdlocked0 Medium Grid 1 Accent 6;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority68 \lsdlocked0 Medium Grid 2 Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority69 \lsdlocked0 Medium Grid 3 Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority70 \lsdlocked0 Dark List Accent 6;
+\lsdsemihidden0 \lsdunhideused0 \lsdpriority71 \lsdlocked0 Colorful Shading Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority72 \lsdlocked0 Colorful List Accent 6;\lsdsemihidden0 \lsdunhideused0 \lsdpriority73 \lsdlocked0 Colorful Grid Accent 6;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority19 \lsdlocked0 Subtle Emphasis;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority21 \lsdlocked0 Intense Emphasis;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority31 \lsdlocked0 Subtle Reference;\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority32 \lsdlocked0 Intense Reference;
+\lsdsemihidden0 \lsdunhideused0 \lsdqformat1 \lsdpriority33 \lsdlocked0 Book Title;\lsdpriority37 \lsdlocked0 Bibliography;\lsdqformat1 \lsdpriority39 \lsdlocked0 TOC Heading;}}{\*\datastore 010500000200000018000000
+4d73786d6c322e534158584d4c5265616465722e362e3000000000000000000000060000
+d0cf11e0a1b11ae1000000000000000000000000000000003e000300feff090006000000000000000000000001000000010000000000000000100000feffffff00000000feffffff0000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffdfffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e5000000000000000000000000500d
+540dc0dacc01feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000105000000000000}}
